@@ -8,6 +8,7 @@ import './sidebar.css';
 export default function Sidebar() {
   return (
     <div className="sidebar">
+      <img src=".../public/logo_orange.png" alt="logo"/>
        <ul className="sidebarList">
           <li className="sidebarListItem">
             <List className="sidebarIcon" htmlColor='gray' />
