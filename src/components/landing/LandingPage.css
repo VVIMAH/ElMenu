@@ -1,0 +1,300 @@
+.LandingPage {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+.LandingNav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 80px;
+    justify-content: space-between;
+}
+
+.RightSide {
+    display: flex;
+    align-items: center;
+}
+
+.RightSide a {
+    margin-right: 20px;
+}
+
+.RightSide .DownloadAppButton {
+    color: white;
+    background: var(--orange);
+    border-radius: 40px;
+    padding: 10px 20px;
+}
+
+.LandingPage .main .Intro {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.main .Intro {
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.main .Intro .TextContent {
+    padding-top: 40px;
+    font-size: 20px;
+    width: 600px;
+}
+
+.main .Intro .TextContent > * {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.main .Intro .Trust {
+    display: flex;
+    align-items: center;
+    background-color: #f547471e;
+    width: fit-content;
+    padding: 5px 5px 5px 0;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 0;
+}
+
+.Trust i {
+    color: #FDC55E;
+    background-color: #F54748;
+    margin-right: 10px;
+    margin-left: 4px;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.main .Intro .TextContent .SearchFood {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 40px;
+    width: 500px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.SearchFood i {
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.SearchFood i.button {
+    color: white;
+    background-color: var(--orange);
+    padding: 12px;
+    margin-right: 3px;
+}
+
+.SearchFood input {
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 18px;
+}
+
+#todayoffers {
+    text-align: center;
+}
+
+#todayoffers h1 {
+    margin-bottom: 30px;
+}
+
+.UnderH1 {
+    color: #19191971;
+    font-size: 16px;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.FoodCards {
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.FoodCard {
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(179.69deg, rgba(255, 255, 255, 0) -31.53%, #FFD7A6 -31.53%, rgba(255, 215, 166, 0.395833) 303.71%, #FF991F 303.75%);
+    width: 300px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: calc(198px / 2);
+    padding-bottom: 0;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: calc((198px / 2) + 50px);
+}
+
+.FoodCard .FoodProfile {
+    position: absolute;
+    top: calc(-198px / 2);
+}
+
+.FoodCard .FoodProfile img {
+    height: 198px;
+    width: 198px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0) 40%);
+}
+
+.FoodProfile::before {
+    content: '';
+    content: '';
+    position: absolute;
+    height: calc(100% + 30px);
+    width: calc(100% + 30px);
+    background: red;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(180deg, var(--orange) 40%, #fff 40%);
+}
+
+.FoodCard .FoodProfile .price {
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    font-size: 20px;
+    display: block;
+    background: var(--orange);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    color: white;
+    border: 3px solid white;
+    padding: 25px;
+    bottom: 0;
+    right: 0;
+}
+
+.Reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Reviews .Reviewers {
+    display: flex;
+    width: calc(38px * 2);
+}
+
+.Reviews > * {
+    margin-right: 10px;
+}
+
+.Reviews .Reviewers img {
+    height: 38px;
+    width: 38px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.Reviews .Reviewers img:nth-child(2) {
+    transform: translateX(-20px);
+}
+
+.Reviews .Reviewers img:nth-child(3) {
+    transform: translateX(-40px);
+}
+
+.FoodCard h2 {
+    font-weight: 100;
+    color: #F54748;
+    font-style: italic;
+}
+
+.FoodCard > p {
+    font-weight: 100;
+    font-style: italic;
+    color: #7a7a7a;
+    margin: 10px 0;
+}
+
+.FoodCard > button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: var(--orange);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transform: translateY(20px);
+    height: 40px;
+}
+
+.FoodRate {
+    color: #ffb800;
+    font-size: 20px;
+}
+
+#why {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 448px;
+    width: 80%;
+    margin: auto;
+    min-width: 1000px;
+    margin-top: 100px;
+}
+
+#why .Left {
+    background-size: cover !important;
+    height: 448px;
+    min-width: 448px;
+    position: relative;
+}
+
+.Left img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 110%;
+}
+
+#why .Right {
+    padding: 30px;
+}
+
+#why .Right h1 {
+    margin-bottom: 30px;
+}
+
+#why .Right p {
+    color: #606060;
+}
