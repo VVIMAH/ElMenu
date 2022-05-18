@@ -27,46 +27,46 @@ export default function() {
        </div>
         <div className="foodContent">
         <div className="foodDetails">
-            <img src="/public/images/food" alt="" className="foodIMg"/>
+            <img src="/assets/images.jpeg" alt="" className="foodIMg"/>
        <strong className="foodName">Humbuger</strong>
        <p className="fooddesc"> mage with italian sauce and saucegae</p>
        <h4 className="foodPrice">FRW 5000</h4>
     </div>
     <div className="foodDetails">
-    <img src="/public/images/food" alt="" className="foodIMg"/>
+    <img src="/assets/images(2).jpeg" alt="" className="foodIMg"/>
        <strong className="foodName">Humbuger</strong>
        <p className="fooddesc"> mage with italian sauce and saucegae</p>
        <h4 className="foodPrice">FRW 5000</h4>
     </div>
     <div className="foodDetails">
-    <img src="/public/images/food" alt="" className="foodIMg"/>
+    <img src="/assets/images(4).jpeg" alt="" className="foodIMg"/>
        <strong className="foodName">Humbuger</strong>
        <p className="fooddesc"> mage with italian sauce and saucegae</p>
        <h4 className="foodPrice">FRW 5000</h4>
     </div>
     <div className="foodDetails">
-    <img src="/public/images/food" alt="" className="foodIMg"/>
+    <img src="/public/assets/images(3).jpeg" alt="" className="foodIMg"/>
        <strong className="foodName">Humbuger</strong>
        <p className="fooddesc"> mage with italian sauce and saucegae</p>
        <h4 className="foodPrice">FRW 5000</h4>
 
     </div>
         <div className="foodDetails">
-        <img src="/public/images/food" alt="" className="foodIMg"/>
+        <img src="/assets/images(1).jpeg" alt="" className="foodIMg"/>
        <strong className="foodName">Humbuger</strong>
        <p className="fooddesc"> mage with italian sauce and saucegae</p>
        <h4 className="foodPrice">FRW 5000</h4>
     
     </div>
     <div className="foodDetails">
-    <img src="/public/images/food" alt="" className="foodIMg"/>
+    <img src="/public/assets/images(2).jpeg" alt="" className="foodIMg"/>
        <strong className="foodName">Humbuger</strong>
        <p className="fooddesc"> mage with italian sauce and saucegae</p>
        <h4 className="foodPrice">FRW 5000</h4>
 
     </div>
     <div className="foodDetails">
-    <img src="/public/images/food" alt="" className="foodIMg"/>
+    <img src="/assets/images.jpeg" alt="" className="foodIMg"/>
        <strong className="foodName">Humbuger</strong>
        <p className="fooddesc"> mage with italian sauce and saucegae</p>
        <h4 className="foodPrice">FRW 5000</h4>
