@@ -1,5 +1,5 @@
 import React from 'react';
-import './resmenu.css';
+import '../Resmenu/resmenu.css';
 
 function Resmenu(){
     return(
@@ -46,7 +46,9 @@ function Resmenu(){
            </h3>
            <div className="all">
               <div className="listin">
-               <img src={"one copy.svg"} alt="" className="circle" />
+              <a href="./restinfo">
+                  <img src={"one copy.svg"} alt="" className="circle"  />
+                  </a> 
                    </div> 
                <div className="first">
                <div className="top">
@@ -60,7 +62,10 @@ function Resmenu(){
            </div>
              <div className="all">
               <div className="listin">
+                  <a href="./restype">
+
                <img src={"two.svg"} alt="" className="circle" />
+                  </a>
                    </div> 
                <div className="first">
                <div className="top">
@@ -74,7 +79,10 @@ function Resmenu(){
            </div>
            <div className="all">
               <div className="listin">
+                  <a href="./resmenu">
+
                <img src={"three copy.svg"} alt="" className="circle" />
+                  </a>
                    </div> 
                <div className="first">
                <div className="top">

@@ -1,5 +1,5 @@
 import React from 'react';
-import './../App.css'
+import './signup.css';
 function Signup(){
     return(
         <div className="App">

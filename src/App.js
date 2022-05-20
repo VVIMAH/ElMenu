@@ -1,10 +1,10 @@
 
-import './restinfo.css';
+// import './components/ Restinfo/restinfo.css';
 import{BrowserRouter,Routes,Route} from 'react-router-dom'
-import Signup from './components/signup';
-import Restinfo from './components/restinfo';
-import Restype from './components/restype';
-import Resmenu from './components/resmenu';
+import Signup from './components/signup/signup';
+import Restinfo from './components/Restinfo/restinfo';
+import Restype from './components/Restype/restype';
+import Resmenu from './components/Resmenu/resmenu';
 
 function App() {
   return (

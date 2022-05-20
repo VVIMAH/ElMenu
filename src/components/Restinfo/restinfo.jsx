@@ -1,5 +1,5 @@
 import React from "react";
-import '../restinfo.css';
+import './restinfo.css';
 function Restinfo(){
 return(
 <div className="container">
@@ -45,7 +45,9 @@ return(
            </h3>
            <div className="all">
               <div className="listin">
+                  <a href="./restinfo"> 
                <img src={"one.svg"} alt="" className="circle" />
+                  </a>
                    </div> 
                <div className="first">
                <div className="top">
@@ -59,7 +61,9 @@ return(
            </div>
              <div className="all">
               <div className="listin">
+                  <a href="./restype"> 
                <img src={"two.svg"} alt="" className="circle" />
+                  </a>
                    </div> 
                <div className="first">
                <div className="top">
@@ -73,7 +77,10 @@ return(
            </div>
            <div className="all">
               <div className="listin">
+                  <a href="./resmenu">
+
                <img src={"three.svg"} alt="" className="circle" />
+                  </a>
                    </div> 
                <div className="first">
                <div className="top">

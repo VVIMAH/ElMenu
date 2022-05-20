@@ -1,5 +1,5 @@
 import React from "react";
-import '../restype.css';
+import './restype.css';
 function Restype(){
     return(
         <div className="contain">
@@ -45,7 +45,10 @@ function Restype(){
            </h3>
            <div className="all">
               <div className="listin">
+                  <a href="./restinfo">
+
                <img src={"one copy.svg"} alt="" className="circle" />
+                  </a>
                    </div> 
                <div className="first">
                <div className="top">
@@ -59,7 +62,10 @@ function Restype(){
            </div>
              <div className="all">
               <div className="listin">
+                  <a href="./restype">
+
                <img src={"two copy.svg"} alt="" className="circle" />
+                  </a>
                    </div> 
                <div className="first">
                <div className="top">
@@ -73,7 +79,10 @@ function Restype(){
            </div>
            <div className="all">
               <div className="listin">
+                  <a href="./resmenu">
+
                <img src={"three.svg"} alt="" className="circle" />
+                  </a>
                    </div> 
                <div className="first">
                <div className="top">
