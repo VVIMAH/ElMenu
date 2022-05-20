@@ -1,53 +1,23 @@
-import './App.css';
+
+import './restinfo.css';
+import{BrowserRouter,Routes,Route} from 'react-router-dom'
+import Signup from './components/signup';
+import Restinfo from './components/restinfo';
+import Restype from './components/restype';
+import Resmenu from './components/resmenu';
 
 function App() {
   return (
-    <div className="App">
-      
-    <div className='one'>
-      
-
-<img src={require('../src/Group 5.png')} alt="" />
-      
-      </div>
-    
-    <div className='two'>
-    <h1>Sign Up</h1>
-    
-    <form action="#" method='POST'>
-      <div className='Field'>
-        <label >FIRST NAME</label><br />
-        <input type="text" name='firstname' placeholder='First Name' /><br />
-      </div>
-      <div className='Field'>
-        <label >LAST NAME</label><br />
-        <input type="text" name='lastname' placeholder='Last Name' /><br />
-      </div>
-      <div className='Field'>
-        <label >PHONE</label><br />
-        <input type="number" name='phone'  /><br />
-      </div>
-      <div className='Field'>
-        <label >EMAIL </label><br />
-        <input type="email" name='email' placeholder='Email Address' /><br />
-      </div>
-      <div className='Field'>
-        <label >PASSWORD</label><br />
-        <input type="password" name='password' placeholder='Password' /><br />
-      </div>
-     
-<div className='Field'>
-      <button type="submit" className='sub'>Sign up</button>
-  </div>
-
-    <div className='a'>
-      Already have an account?  
-      <a href="https://fonts.google.com/specimen/Raleway?query=raleway">Login</a>
-      </div>
-    </form>
-   
-    </div>
-    </div>
+    <div>
+   <BrowserRouter>
+   <Routes>
+   <Route path='/signup'element={<Signup/>}></Route>
+     <Route path='/restinfo'element={<Restinfo/>}></Route>
+    <Route path='/restype' element={<Restype/>}></Route>
+    <Route path='/resmenu' element={<Resmenu/>}></Route>
+   </Routes>
+   </BrowserRouter>
+   </div>
   );
 }
 

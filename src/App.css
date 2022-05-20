@@ -32,7 +32,7 @@
   text-align: center;
   color: #656565;
 }
-form input{
+.form input{
 
   height: 3.5em;
   width: 400px;
@@ -42,7 +42,7 @@ form input{
   background-color: #a0c7c712;
   
 }
-form{
+.form{
   display: flex;
   flex-direction: column;
   padding: 2em;
@@ -83,7 +83,7 @@ form{
   width: 23em;
   padding-bottom: 0;
 }
-form label{
+.form label{
 color: #939393;
 }
 button:hover{
