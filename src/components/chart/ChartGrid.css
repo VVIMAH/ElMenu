@@ -1,0 +1,28 @@
+.overall{
+   display:flex;
+}
+.container{
+
+    width:70%;
+    border:1px solid rgb(238, 232, 232);
+}  
+.chartGrid{
+    margin-top: 4rem;
+    width:20%;
+    padding-left: 0rem;
+     border:1px solid rgb(238, 232, 232);
+}
+canvas{
+    margin-top:2rem;
+}
+.gid-itemone{
+    border:1px solid rgb(204, 201, 201);
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.2rem;
+    width: 80%;
+    height: 20%;
+}
+.gid-itemone p,h3{
+    padding:0rem 4rem;
+}
+
