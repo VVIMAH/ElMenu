@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+ 
   
 }
 .App{
@@ -11,13 +12,13 @@
   
 }
 .one{
-  height: 800px;
+  height: 100vh;
   width: 50%;
   background-color: #F7941D;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  
 
 }
 
@@ -27,6 +28,7 @@
   width: 50%;
   color: black;
   padding: 20px;
+  height: 100vh;
 }
 .two h1{
   text-align: center;
@@ -88,4 +90,35 @@ color: #939393;
 }
 button:hover{
   cursor: pointer;
+}
+@media only screen and (max-width : 800px){
+  .App{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ 
+  }
+  .one{
+    width: 100%;
+    height: 20vh;
+  }
+  .form{
+    
+    padding: 0;
+    
+    
+  }
+  .form h1{
+    padding-bottom: 1em;
+  }
+  .two{
+    width: 100%;
+
+  }
+  .form input {
+    width: 340px;
+  }
+  .Field .sub{
+    width: 340px;
+  }
 }

@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
 }
-.right{
+.RestaurantType{
     width: 60%;
     height: 60%;
     padding: 2em;
@@ -13,18 +13,23 @@
     justify-content: space-evenly;
 }
 .BODY{
-    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    /* align-items: center; */
 }
-.right p{
+.RestaurantType p{
     padding-bottom: 1em;
 }
-.right select{
+.RestaurantType select{
     height: 3em;
     background-color: #F6F6F6;
     border-radius: 3px;
     border-color: transparent;
     padding-left: 1em;
     color: #A6A6A6;
+    margin-bottom: 20px;
 }
 .hrs{
     display: flex;
@@ -32,10 +37,12 @@
 }
 
 .solid{
+    height: 4em;
 background-color: #F6F6F6;
 font-size: 12px;
 color: #A6A6A6;
 padding-left: 1em;
+overflow: hidden;
 
 }
 .solid select{

@@ -6,7 +6,8 @@
     display: flex;
 }
 .last{
-    width: 60%;
+    
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
