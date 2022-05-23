@@ -1,23 +1,18 @@
 import './LandingPage.css'
 import LandingNav from './LandingNav'
 import FoodCard from './FoodCard'
-import { createDummyArray } from '../../oneliners'
+import { createDummyArray, wait } from '../../oneliners'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
+import {getChildrenByOrder, scrollElementIntoView, getRandomCategories} from './extra'
+
 
 const LandingPage = (props) => {
-  const scrollElementIntoView = (e) => {
-    e.preventDefault()
-    document
-      .querySelector(`${e.target.getAttribute('href').slice(1)}`)
-      .scrollIntoView({ behavior: 'smooth' })
-  }
   function swap(from, to, parent){
-    // console.log("PARENT:",this)
     parent = arguments[2]
-    let fromElement = parent.children[from-1]
-    let toElement = parent.children[to-1]
-    // console.dir(fromElement, toElement)
+    let fromElement = (isNaN(from)) ? from : parent[from-1]
+    let toElement = (isNaN(to)) ? to : parent[to-1]
+    console.log("Going to switch", fromElement, " with ", toElement)
     from = {
       element: fromElement,
       top: fromElement.getBoundingClientRect().top,
@@ -34,10 +29,10 @@ const LandingPage = (props) => {
     fromElement.style.transform = `translate(${(from.left > to.left) ? -leftDifference : leftDifference}px, ${(from.top > to.top) ? -topDifference : topDifference}px)`
     toElement.style.transform = `translate(${(from.left < to.left) ? -leftDifference : leftDifference}px, ${(from.top < to.top) ? -topDifference : topDifference}px)`
 
+    let swapper = fromElement.style.order
+    fromElement.style.order = toElement.style.order
+    toElement.style.order = swapper
     setTimeout(()=>{
-      let swapper = fromElement.style.order
-      fromElement.style.order = toElement.style.order
-      toElement.style.order = swapper
       fromElement.style.transform = ""
       toElement.style.transform = ""
     }, 400)
@@ -45,11 +40,73 @@ const LandingPage = (props) => {
   }
 
   useEffect(()=>{
+    
     for(let foodCards of document.querySelectorAll('.FoodCards')){
       createDummyArray(foodCards.children.length).reverse().map(i=>{
         foodCards.children[i-1].style.order = i
-        // console.log(foodCards.children[i-1])
+        foodCards.children[i-1].classList.add(i)
+        let tags = JSON.stringify(getRandomCategories())
+        foodCards.children[i-1].setAttribute("tags", tags)
+        foodCards.children[i-1].children[3].style.wordBreak = "break-all"
+        foodCards.children[i-1].children[3].textContent = tags
         return true
+      })
+    }
+    for(let category of document.querySelectorAll('.Category')){
+      if(category.getAttribute('listeners')){
+        continue
+      }else{
+        category.setAttribute('listeners', 1)
+      }
+      category.addEventListener('click', async (e)=>{
+        document.querySelector('.Category.active').classList.remove('active')
+        category.classList.add('active')
+
+        for(let foodCard of document.querySelectorAll('#menu .FoodCard')){
+          if(JSON.parse(foodCard.getAttribute('tags')).includes(category.textContent)){
+            foodCard.classList.remove('notSelected')
+          }else{
+            foodCard.classList.add('notSelected')
+          }
+        }
+        await wait(200)
+        console.log("%c [START]", "font-size: 25px; color: green")
+        let numChecked = document.querySelectorAll('#menu .FoodCard').length
+        let theChildren = getChildrenByOrder(document.querySelector('#menu .FoodCards'))
+        for(let foodCard of theChildren){
+          if(foodCard.classList.contains('notSelected')){
+            let foundPlace = false
+            
+            while(!foundPlace){
+              if(numChecked <= 0) break
+              if(numChecked === document.querySelectorAll('#menu .FoodCard:not(.notSelected)').length) break
+              console.log({
+                numChecked, 
+                numCheckedElement: theChildren[numChecked-1], 
+                currentlySelected: (theChildren[numChecked-1].classList.contains('notSelected')),
+                foodCardToSwap: foodCard
+              })
+
+              if(Number(foodCard.style.order) === theChildren.length){
+                console.log("%c LAST", "color: gold;")
+                foundPlace = true
+                numChecked--
+                break
+              }
+              if(theChildren[numChecked-1].classList.contains('notSelected')){
+                console.log("%c ALREADY NOT SELECTED", "color: gold;")
+                numChecked--
+              }else{
+                await wait(1000)
+                console.log(`${foodCard.style.order} -> ${theChildren[numChecked-1].style.order}`)
+                swap(Number(foodCard.style.order), Number(theChildren[numChecked-1].style.order), theChildren)
+                foundPlace = true
+                numChecked--
+              }
+            }
+          }
+        }
+        console.log("%c [END]", "font-size: 25px; color: RED")
       })
     }
   }, [])
@@ -192,7 +249,7 @@ const LandingPage = (props) => {
             ever since the 1500s
           </p>
           <div className="Categories">
-            <button className="Category" onClick={()=>{swap(2, 3, document.querySelectorAll('.FoodCards')[1])}}>Ramen</button>
+            <button className="Category" onClick={()=>{swap(2, 6, document.querySelectorAll('.FoodCards')[1])}}>Ramen</button>
             <button className="Category">Breakfast</button>
             <button className="Category">Lunch</button>
             <button className="Category">Dinner</button>
@@ -202,7 +259,7 @@ const LandingPage = (props) => {
             <button className="Category">Drinks</button>
           </div>
           <div className="FoodCards">
-            {createDummyArray(8).map((x) => (
+            {createDummyArray(8).reverse().map((x) => (
               <FoodCard
                 key={x}
                 profile={'foodSample.png'}

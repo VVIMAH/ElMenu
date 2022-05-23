@@ -9,4 +9,11 @@ const createDummyArray = (i)=>{
     return arr
 }
 
+const wait = (duration)=>{
+    return new Promise(resolve=>{
+        setTimeout(()=>{resolve()}, duration)
+    })
+}
+
 module.exports.createDummyArray = createDummyArray
+module.exports.wait = wait

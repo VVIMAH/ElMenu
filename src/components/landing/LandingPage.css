@@ -782,3 +782,9 @@ div#why::after {
     color: white;
     font-weight: bold;
 }
+
+
+.notSelected{
+    filter: grayscale(0.9);
+    pointer-events: none;
+}
