@@ -1,0 +1,32 @@
+.rightbar{
+  flex: 1;
+  margin-left: 900px;
+  position: absolute;
+  top: 30%;
+}
+.box{
+  width: 500px;
+  height: 40px;
+  background-color: #000000;
+  border-radius: 0.9em;
+  border:  1px solid #F7941D;
+  padding-top: 0.5em;
+  margin: 1em;
+  
+}
+.other{
+  margin-left: 295px;
+}
+.food{
+  float: left;
+  color: white;
+  justify-content: space-between;
+  padding-left: 2em;
+}
+.items{
+  padding-top: 1em;
+}
+.right{
+  float: right;
+}
+
