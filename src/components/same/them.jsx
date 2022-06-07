@@ -1,4 +1,4 @@
-import "../same/them.css";
+import "../same/them.scoped.css";
 import React, { useState } from "react";
 import NavBarVans from "../navbar_vanessa/NavBar";
 import Resmenu from "../Resmenu/resmenu";

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Resmenu/resmenu.css";
+import "./resmenu.scoped.css";
 
 function Resmenu() {
   return (

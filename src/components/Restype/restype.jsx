@@ -1,5 +1,5 @@
 import React from "react";
-import "./restype.css";
+import "./restype.scoped.css";
 function Restype(props) {
   return (
     <div className="RestaurantType">
