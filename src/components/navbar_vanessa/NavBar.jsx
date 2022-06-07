@@ -1,4 +1,4 @@
-import "../navbar_vanessa/NavBar.css"
+import "./NavBar.scoped.css"
 const NavBarVans = () => {
   return (
     <div className="navbar">

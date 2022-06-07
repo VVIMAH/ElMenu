@@ -1,10 +1,12 @@
-import './LandingPage.css'
+import './LandingPage.scoped.css'
 import LandingNav from './LandingNav'
 import FoodCard from './FoodCard'
 import { createDummyArray, wait } from '../../oneliners'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import {getChildrenByOrder, scrollElementIntoView, getRandomCategories} from './extra'
+import SearchIcon from '@mui/icons-material/Search';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 const LandingPage = (props) => {
@@ -118,7 +120,7 @@ const LandingPage = (props) => {
         <div className="Intro">
           <div className="TextContent">
             <div className="Trust">
-              <i className="bx bxs-heart"></i>
+              <FavoriteIcon />
               <span>people trust us</span>
             </div>
             <h1>
@@ -141,9 +143,9 @@ const LandingPage = (props) => {
               food will reach you in 60 minutes.
             </span>
             <div className="SearchFood">
-              <i className="bx bx-search-alt-2"></i>
+              <SearchIcon className="button"/>
               <input type="text" placeholder="Search food" />
-              <i className="bx bx-search-alt-2 button"></i>
+              <SearchIcon className="button"/>
             </div>
             <Link
               to="#why"

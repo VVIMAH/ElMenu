@@ -1,7 +1,8 @@
 import React from 'react';
 import Content from '../content/Content';
-import './feed.css';
+import './feed.scoped.css';
 import Topbar from '../topbar/Topbar';
+import Sidebar from '../sidebar/Sidebar';
 
 
 export default function Feed() {

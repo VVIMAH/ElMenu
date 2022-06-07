@@ -1,6 +1,6 @@
 import React from 'react'
 import { Search,Notifications } from '@mui/icons-material';
-import './topbar.css';
+import './topbar.scoped.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 export default function Topbar() {
   return (

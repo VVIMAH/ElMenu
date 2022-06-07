@@ -1,5 +1,5 @@
 import React from "react";
-import "./restinfo.css";
+import "./restinfo.scoped.css";
 
 const  Restinfo = (props) =>{
   console.log(props)

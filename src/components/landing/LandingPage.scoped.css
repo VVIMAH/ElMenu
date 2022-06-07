@@ -1,18 +1,18 @@
-body{
+.LandingPage >>> body{
     background: url('../../../public/bg0.png');
 }
-.LandingPage {
+.LandingPage >>> {
     height: 100%;
     width: 100%;
     /* padding-bottom: 100px; */
 }
 
-a {
+.LandingPage >>> a {
     text-decoration: none;
     color: initial;
 }
 
-.LandingNav {
+.LandingPage >>> .LandingNav {
     display: flex;
     align-items: center;
     padding: 20px;
@@ -21,18 +21,18 @@ a {
     width: 100%;
 }
 
-.LandingNav .RightSide {
+.LandingPage >>> .LandingNav .RightSide {
     display: flex;
     align-items: center;
 }
 
-.LandingNav .RightSide a {
+.LandingPage >>> .LandingNav .RightSide a {
     margin-right: 20px;
     position: relative;
 }
 
 
-.LandingNav .RightSide a:not(.LandingNav .RightSide a:last-child)::after {
+.LandingPage >>> .LandingNav .RightSide a:not(.LandingNav .RightSide a:last-child)::after {
     content: '';
     background: var(--orange);
     position: absolute;
@@ -45,18 +45,18 @@ a {
 
 }
 
-.LandingNav .RightSide a:not(.LandingNav .RightSide a:last-child):hover::after{
+.LandingPage >>> .LandingNav .RightSide a:not(.LandingNav .RightSide a:last-child):hover::after{
     width: calc(100% - 4px);
 }
 
-.LandingNav .RightSide .DownloadAppButton {
+.LandingPage >>> .LandingNav .RightSide .DownloadAppButton {
     color: white;
     background: var(--orange);
     border-radius: 40px;
     padding: 10px 20px;
 }
 
-.LandingNav .MenuButton{
+.LandingPage >>> .LandingNav .MenuButton{
     font-size: 24px;
     opacity: 0;
     pointer-events: none;
@@ -65,28 +65,28 @@ a {
     right: 15px;
 }
 
-.LandingNav .MenuButton:hover{
+.LandingPage >>> .LandingNav .MenuButton:hover{
     transform: rotate(-20deg);
 }
 
-.ClickedMenu{
+.LandingPage >>> .ClickedMenu{
     color: white !important;
     transform: rotate(-20deg);
     position: fixed !important;
     z-index: 4;
 }
-.showMenu{
+.LandingPage >>> .showMenu{
     right: 0 !important;
     z-index: 3;
 }
 
 @media(max-width: 940px){
-    .LandingNav .MenuButton{
+    .LandingPage >>> .LandingNav .MenuButton{
         cursor: pointer;
         pointer-events: initial;
         opacity: 1;
     }
-    .LandingNav .RightSide{
+    .LandingPage >>> .LandingNav .RightSide{
         flex-direction: column;
         gap: 20px;
         color: white;
@@ -98,40 +98,40 @@ a {
         right: -100%;
         transition: .5s ease;
     }
-    .LandingNav .RightSide a{
+    .LandingPage >>> .LandingNav .RightSide a{
         color: white;
     }
     /* .LandingNav */
 }
 
 
-.LandingPage .main .Intro {
+.LandingPage >>> .main .Intro {
     display: flex;
     justify-content: center;
     /* align-items: center; */
 }
 
-.main .Intro {
+.LandingPage >>> .main .Intro {
     padding: 30px;
     margin-top: 50px;
     position: relative;
 }
 
-.main .Intro > img{
+.LandingPage >>> .main .Intro > img{
     width: 55%;
 }
 @media(min-width: 1200px){
-    .main .Intro > img{
+    .LandingPage >>> .main .Intro > img{
         width: initial;
     }
 }
 @media(max-width: 1100px) {
-    .main .Intro > img{
+    .LandingPage >>> .main .Intro > img{
         width: 0%;
     }    
 }
 
-.main .Intro .TextContent {
+.LandingPage >>> .main .Intro .TextContent {
     padding-top: 40px;
     font-size: 20px;
     width: 600px;
@@ -141,7 +141,7 @@ a {
     margin-bottom: 30px;
 }
 
-.main .Intro .TextContent a.Slider{
+.LandingPage >>> .main .Intro .TextContent a.Slider{
     margin-top: 20px;
     animation: bounce 1s infinite alternate;
 }
@@ -155,7 +155,7 @@ a {
     }
 }
 
-h1 {
+.LandingPage >>> h1 {
     font-size: 3em;
     font-weight: 400;
 }
@@ -166,11 +166,11 @@ h1 {
     }
 }
 
-button{
+.LandingPage >>> button{
     border: 2px solid transparent !important;
 }
 
-button:hover{
+.LandingPage >>> button:hover{
     border: 2px solid var(--orange) !important;
     background-color: transparent !important;
     color: var(--orange) !important;
@@ -179,7 +179,7 @@ button:hover{
 }
 
 
-.main .Intro .Trust {
+.LandingPage >>> .main .Intro .Trust {
     display: flex;
     align-items: center;
     background-color: #f547471e;
@@ -190,16 +190,18 @@ button:hover{
     margin: 0;
 }
 
-.Trust i {
-    color: #FDC55E;
+.LandingPage >>> .Trust svg {
+    fill: #FDC55E;
     background-color: #F54748;
     margin-right: 10px;
     margin-left: 4px;
     border-radius: 50%;
     padding: 4px;
+    height: 20px;
+    width: 20px;
 }
 
-.main .Intro .TextContent .SearchFood {
+.LandingPage >>> .main .Intro .TextContent .SearchFood {
     display: flex;
     align-items: center;
     border: 1px solid rgb(166, 166, 166);
@@ -209,20 +211,28 @@ button:hover{
     font-size: 16px;
 }
 
-.SearchFood i {
-    padding: 15px;
+.LandingPage >>> .SearchFood .button {
+    padding: 0;
     border-radius: 50%;
     font-size: 20px;
+    height: 24px;
+    width: 24px;
+    
 }
 
-.SearchFood i.button {
-    color: white;
+.LandingPage >>> .SearchFood .button:nth-of-type(1){
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.LandingPage >>> .SearchFood .button:nth-of-type(2) {
+    fill: white;
     background-color: var(--orange);
-    padding: 12px;
-    margin-right: 3px;
+    padding: 0px !important;
+    margin-right: 10px;
 }
 
-.SearchFood input {
+.LandingPage >>> .SearchFood input {
     padding: 10px 0px;
     border: none;
     outline: none;
@@ -230,16 +240,16 @@ button:hover{
     font-size: 18px;
 }
 
-#todayoffers, #menu {
+.LandingPage >>> #todayoffers, #menu {
     text-align: center;
     position: relative;
 }
 
-#todayoffers{
+.LandingPage >>> #todayoffers{
     margin-bottom: 200px;
 }
 
-#todayoffers::before {
+.LandingPage >>> #todayoffers::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -251,7 +261,7 @@ button:hover{
     background-repeat: no-repeat;
     z-index: -1;
 }
-#todayoffers::after {
+.LandingPage >>> #todayoffers::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -264,11 +274,11 @@ button:hover{
     background-position: bottom right;
 }
 
-#todayoffers h1, #menu h1 {
+.LandingPage >>> #todayoffers h1, #menu h1 {
     margin-bottom: 30px;
 }
 
-.UnderH1 {
+.LandingPage >>> .UnderH1 {
     color: #19191971;
     font-size: 16px;
     width: 90%;
@@ -276,7 +286,7 @@ button:hover{
     margin: auto;
 }
 
-.FoodCards {
+.LandingPage >>> .FoodCards {
     display: flex;
     padding: 0 40px;
     align-items: center;
@@ -284,7 +294,7 @@ button:hover{
     flex-wrap: wrap;
 }
 
-.FoodCard {
+.LandingPage >>> .FoodCard {
     position: relative;
     padding: 30px;
     display: flex;
@@ -301,12 +311,12 @@ button:hover{
     margin-top: calc((198px / 2) + 50px);
 }
 
-.FoodCard .FoodProfile {
+.LandingPage >>> .FoodCard .FoodProfile {
     position: absolute;
     top: calc(-198px / 2);
 }
 
-.FoodCard .FoodProfile img {
+.LandingPage >>> .FoodCard .FoodProfile img {
     height: 198px;
     width: 198px;
     border-radius: 50%;
@@ -314,7 +324,7 @@ button:hover{
     background: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0) 40%);
 }
 
-.FoodProfile::before {
+.LandingPage >>> .FoodProfile::before {
     content: '';
     content: '';
     position: absolute;
@@ -329,7 +339,7 @@ button:hover{
     background: linear-gradient(180deg, var(--orange) 40%, #fff 40%);
 }
 
-.FoodCard .FoodProfile .price {
+.LandingPage >>> .FoodCard .FoodProfile .price {
     position: absolute;
     /* top: 50%; */
     /* left: 50%; */
@@ -349,14 +359,14 @@ button:hover{
     right: 0;
 }
 
-.Reviews {
+.LandingPage >>> .Reviews {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.Reviews .Reviewers {
+.LandingPage >>> .Reviews .Reviewers {
     display: flex;
     width: calc(38px * 2);
 }
@@ -365,7 +375,7 @@ button:hover{
     margin-right: 10px;
 }
 
-.Reviews .Reviewers img {
+.LandingPage >>> .Reviews .Reviewers img {
     height: 38px;
     width: 38px;
     object-fit: cover;
@@ -381,20 +391,20 @@ button:hover{
     transform: translateX(-40px);
 }
 
-.FoodCard h2 {
+.LandingPage >>> .FoodCard h2 {
     font-weight: 100;
     color: #F54748;
     font-style: italic;
 }
 
-.FoodCard > p {
+.LandingPage >>> .FoodCard > p {
     font-weight: 100;
     font-style: italic;
     color: #7a7a7a;
     margin: 10px 0;
 }
 
-.FoodCard > button {
+.LandingPage >>> .FoodCard > button {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -406,12 +416,12 @@ button:hover{
     height: 40px;
 }
 
-.FoodRate {
+.LandingPage >>> .FoodRate {
     color: #ffb800;
     font-size: 20px;
 }
 
-#why {
+.LandingPage >>> #why {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -423,14 +433,14 @@ button:hover{
     position: relative;
 }
 @media(max-width: 970px){
-    #why{
+    .LandingPage >>> #why{
         width: initial;
     }
     #why > *{
         text-align: center;
     }
 }
-#why::before {
+.LandingPage >>> #why::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -442,7 +452,7 @@ button:hover{
     background-repeat: no-repeat;
     z-index: -1;
 }
-div#why::after {
+.LandingPage >>> div#why::after {
     content: '';
     position: absolute;
     top: 20%;
@@ -454,7 +464,7 @@ div#why::after {
     border-radius: 50%;
     z-index: -1;
 }
-#why .Left {
+.LandingPage >>> #why .Left {
     background-size: 95%;
     height: 448px;
     background-position: center;
@@ -465,7 +475,7 @@ div#why::after {
     /* background-color: white; */
 }
 
-#why .Left::before {
+.LandingPage >>> #why .Left::before {
     content: '';
     content: '';
     position: absolute;
@@ -480,7 +490,7 @@ div#why::after {
     background: linear-gradient(180deg, var(--orange) 40%, #fff 40%);
 }
 
-#why .Left::after {
+.LandingPage >>> #why .Left::after {
     content: '';
     position: absolute;
     height: calc(100% + 5px);
@@ -494,7 +504,7 @@ div#why::after {
     background: white;
 }
 
-.Left img {
+.LandingPage >>> .Left img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -504,38 +514,38 @@ div#why::after {
 }
 
 @media(max-width: 1000px){
-    #why{
+    .LandingPage >>> #why{
         flex-direction: column;
         margin-top: 300px;
         margin-bottom: 100px;
     }
-    #why .Left{
+    .LandingPage >>> #why .Left{
         min-height: 448px;
     }
 }
 
 @media(max-width: 650px){
-    #why .Left{
+    .LandingPage >>> #why .Left{
         min-width: 248px;
         min-height: 248px;
     }
 }
 
-#why .Right {
+.LandingPage >>> #why .Right {
     margin-left: 40px;
     padding: 30px;
 }
 
-#why .Right h1 {
+.LandingPage >>> #why .Right h1 {
     margin-bottom: 30px;
 }
 
-#why .Right p {
+.LandingPage >>> #why .Right p {
     color: #606060;
 }
 
 
-.Service {
+.LandingPage >>> .Service {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -545,7 +555,7 @@ div#why::after {
     border-radius: 25px;
 }
 
-.Services {
+.LandingPage >>> .Services {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px 50px;
@@ -553,17 +563,17 @@ div#why::after {
     margin-top: 20px;
 }
 
-.Service span {
+.LandingPage >>> .Service span {
     font-weight: bold;
 }
 
-.Service img{
+.LandingPage >>> .Service img{
     height: 24px;
     width: 24px;
     object-fit: cover;
 }
 
-#why button {
+.LandingPage >>> #why button {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -575,17 +585,17 @@ div#why::after {
     margin-top: 30px;
 }
 
-#menu{
+.LandingPage >>> #menu{
     margin-top: 200px;
 }
 
-#menu h1{
+.LandingPage >>> #menu h1{
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
 }
 
-.Categories{
+.LandingPage >>> .Categories{
     display: flex;
     gap: 10px;
     width: fit-content;
@@ -596,7 +606,7 @@ div#why::after {
     justify-content: center;
 }
 
-.Categories button {
+.LandingPage >>> .Categories button {
     padding: 5px 20px;
     border-radius: 40px;
     background: transparent;
@@ -607,18 +617,18 @@ div#why::after {
     border: 2px solid var(--orange) !important;
 }
 
-.Categories button.active{
+.LandingPage >>> .Categories button.active{
     background: var(--orange);
     color: white;
 }
 
-.Categories button:not(button.active):hover{
+.LandingPage >>> .Categories button:not(button.active):hover{
     background: var(--orange) !important;
     color: white !important;
 }
 
 
-#download  {
+.LandingPage >>> #download  {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -632,7 +642,7 @@ div#why::after {
     /* background: #FEF4E8; */
 }
 
-#download::before {
+.LandingPage >>> #download::before {
     content: '';
     top: 50%;
     left: 50%;
@@ -645,7 +655,7 @@ div#why::after {
 }
 
 
-#download  .Left {
+.LandingPage >>> #download  .Left {
     background-size: 95%;
     height: 448px;
     background-position: center;
@@ -656,23 +666,23 @@ div#why::after {
     background-color: #FEF4E8;
 }
 @media(max-width: 950px){
-    #download{
+    .LandingPage >>> #download{
         flex-direction: column;
     }
-    #download  .Left{
+    .LandingPage >>> #download  .Left{
         min-height: 448px;
     }
 }
 
 @media(max-width: 650px){
-    #download .Left{
+    .LandingPage >>> #download .Left{
         min-width: 248px;
         width: 248px;
         min-height: 248px;
         height: 248px;
     }
 }
-#download .Left::before {
+.LandingPage >>> #download .Left::before {
     content: '';
     content: '';
     position: absolute;
@@ -689,7 +699,7 @@ div#why::after {
 
 
 
-#download .Left img {
+.LandingPage >>> #download .Left img {
     position: absolute;
     top: 43%;
     left: 50%;
@@ -698,27 +708,27 @@ div#why::after {
     z-index: 2;
 }
 
-#download  .Right {
+.LandingPage >>> #download  .Right {
     margin-left: 40px;
     padding: 30px;
 }
 
-#download  .Right h1 {
+.LandingPage >>> #download  .Right h1 {
     margin-bottom: 30px;
 }
 
-#download  .Right p {
+.LandingPage >>> #download  .Right p {
     color: #606060;
 }
 
-.DownloadButtons{
+.LandingPage >>> .DownloadButtons{
     margin-top: 20px;
     display: flex;
     gap: 10px;
     cursor: pointer;
 }
 
-.LandingPage #footer {
+.LandingPage >>> #footer {
     margin-top: 100px;
     background: white;
     display: flex;
@@ -728,63 +738,63 @@ div#why::after {
     padding: 20px;
 }
 
-.LandingPage #footer > div {
+.LandingPage >>> #footer > div {
     display: flex;
     flex-direction: column;
     max-width: 400px;
 }
 
-.fmain > img {
+.LandingPage >>> .fmain > img {
     height: 60px;
     width: fit-content;
     
 }
 
-.fmain {
+.LandingPage >>> .fmain {
     gap: 10px;
 }
 
-.fmain i {
+.LandingPage >>> .fmain i {
     color: var(--orange);
     font-size: 24px;
     margin-right: 10px;
     cursor: pointer;
 }
 
-.fmain i:hover{
+.LandingPage >>> .fmain i:hover{
     transform: rotate(20deg);
 }
 
-.fGroup > h3 {
+.LandingPage >>> .fGroup > h3 {
     color: var(--orange);
     margin-bottom: 10px;
 }
 
-.fGroup > a {
+.LandingPage >>> .fGroup > a {
     font-size: 15px;
     margin-bottom: 10px;
 }
 
-.fGroup input, .fGroup button {
+.LandingPage >>> .fGroup input, .fGroup button {
     padding: 10px 20px;
     border: none;
     margin-top: 20px;
 }
 
-.fGroup input {
+.LandingPage >>> .fGroup input {
     border-bottom: 2px solid gray;
     background: #f0f0f0;
     margin-right: 10px;
 }
 
-.fGroup button {
+.LandingPage >>> .fGroup button {
     background: var(--orange);
     color: white;
     font-weight: bold;
 }
 
 
-.notSelected{
+.LandingPage >>> .notSelected{
     filter: grayscale(0.9);
     pointer-events: none;
 }

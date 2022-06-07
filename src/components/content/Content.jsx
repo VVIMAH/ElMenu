@@ -1,8 +1,8 @@
 import React from 'react';
-import './content.css';
+import './content.scoped.css';
 import Rightbar from '../rightbar/Rightbar';
 
-export default function() {
+export default function Content() {
   return (
     <div className="content">
        <div className="upper">

@@ -1,5 +1,5 @@
 import React from 'react'
-import './rightbar.css';
+import './rightbar.scoped.css';
 import {CheckCircle,AddCircle} from "@mui/icons-material";
 
 export default function Rightbar() {

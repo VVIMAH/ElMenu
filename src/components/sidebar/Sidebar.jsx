@@ -3,12 +3,12 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import CompassCalibrationIcon from '@mui/icons-material/CompassCalibration';
 
 import React from 'react';
-import './sidebar.css';
+import './sidebar.scoped.css';
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <img src=".../public/logo_orange.png" alt="logo"/>
+      <img src="/logo_whitebg.png" alt="logo"/>
        <ul className="sidebarList">
           <li className="sidebarListItem">
             <List className="sidebarIcon" htmlColor='gray' />
@@ -45,3 +45,5 @@ export default function Sidebar() {
     </div>
   )
 }
+
+
