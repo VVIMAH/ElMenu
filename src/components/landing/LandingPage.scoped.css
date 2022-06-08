@@ -1,0 +1,800 @@
+.LandingPage >>> body{
+    background: url('../../../public/bg0.png');
+}
+.LandingPage >>> {
+    height: 100%;
+    width: 100%;
+    /* padding-bottom: 100px; */
+}
+
+.LandingPage >>> a {
+    text-decoration: none;
+    color: initial;
+}
+
+.LandingPage >>> .LandingNav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 80px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.LandingPage >>> .LandingNav .RightSide {
+    display: flex;
+    align-items: center;
+}
+
+.LandingPage >>> .LandingNav .RightSide a {
+    margin-right: 20px;
+    position: relative;
+}
+
+
+.LandingPage >>> .LandingNav .RightSide a:not(.LandingNav .RightSide a:last-child)::after {
+    content: '';
+    background: var(--orange);
+    position: absolute;
+    bottom: -5px;
+    left: 2px;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    transition: .5s ease;
+
+}
+
+.LandingPage >>> .LandingNav .RightSide a:not(.LandingNav .RightSide a:last-child):hover::after{
+    width: calc(100% - 4px);
+}
+
+.LandingPage >>> .LandingNav .RightSide .DownloadAppButton {
+    color: white;
+    background: var(--orange);
+    border-radius: 40px;
+    padding: 10px 20px;
+}
+
+.LandingPage >>> .LandingNav .MenuButton{
+    font-size: 24px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+
+.LandingPage >>> .LandingNav .MenuButton:hover{
+    transform: rotate(-20deg);
+}
+
+.LandingPage >>> .ClickedMenu{
+    color: white !important;
+    transform: rotate(-20deg);
+    position: fixed !important;
+    z-index: 4;
+}
+.LandingPage >>> .showMenu{
+    right: 0 !important;
+    z-index: 3;
+}
+
+@media(max-width: 940px){
+    .LandingPage >>> .LandingNav .MenuButton{
+        cursor: pointer;
+        pointer-events: initial;
+        opacity: 1;
+    }
+    .LandingPage >>> .LandingNav .RightSide{
+        flex-direction: column;
+        gap: 20px;
+        color: white;
+        background: black;
+        padding: 50px 20px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        transition: .5s ease;
+    }
+    .LandingPage >>> .LandingNav .RightSide a{
+        color: white;
+    }
+    /* .LandingNav */
+}
+
+
+.LandingPage >>> .main .Intro {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.LandingPage >>> .main .Intro {
+    padding: 30px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.LandingPage >>> .main .Intro > img{
+    width: 55%;
+}
+@media(min-width: 1200px){
+    .LandingPage >>> .main .Intro > img{
+        width: initial;
+    }
+}
+@media(max-width: 1100px) {
+    .LandingPage >>> .main .Intro > img{
+        width: 0%;
+    }    
+}
+
+.LandingPage >>> .main .Intro .TextContent {
+    padding-top: 40px;
+    font-size: 20px;
+    width: 600px;
+}
+
+.main .Intro .TextContent > * {
+    margin-bottom: 30px;
+}
+
+.LandingPage >>> .main .Intro .TextContent a.Slider{
+    margin-top: 20px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+.LandingPage >>> h1 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+@media(max-width: 650px){
+    h1:not(.Intro h1){
+        font-size: 2em !important;
+    }
+}
+
+.LandingPage >>> button{
+    border: 2px solid transparent !important;
+}
+
+.LandingPage >>> button:hover{
+    border: 2px solid var(--orange) !important;
+    background-color: transparent !important;
+    color: var(--orange) !important;
+    cursor: pointer;
+    
+}
+
+
+.LandingPage >>> .main .Intro .Trust {
+    display: flex;
+    align-items: center;
+    background-color: #f547471e;
+    width: fit-content;
+    padding: 5px 5px 5px 0;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 0;
+}
+
+.LandingPage >>> .Trust svg {
+    fill: #FDC55E;
+    background-color: #F54748;
+    margin-right: 10px;
+    margin-left: 4px;
+    border-radius: 50%;
+    padding: 4px;
+    height: 20px;
+    width: 20px;
+}
+
+.LandingPage >>> .main .Intro .TextContent .SearchFood {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 40px;
+    width: 500px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.LandingPage >>> .SearchFood .button {
+    padding: 0;
+    border-radius: 50%;
+    font-size: 20px;
+    height: 24px;
+    width: 24px;
+    
+}
+
+.LandingPage >>> .SearchFood .button:nth-of-type(1){
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.LandingPage >>> .SearchFood .button:nth-of-type(2) {
+    fill: white;
+    background-color: var(--orange);
+    padding: 0px !important;
+    margin-right: 10px;
+}
+
+.LandingPage >>> .SearchFood input {
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 18px;
+}
+
+.LandingPage >>> #todayoffers, #menu {
+    text-align: center;
+    position: relative;
+}
+
+.LandingPage >>> #todayoffers{
+    margin-bottom: 200px;
+}
+
+.LandingPage >>> #todayoffers::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100%;
+    background: url('../../../public/bg1.png');
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.LandingPage >>> #todayoffers::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100%;
+    background: url('../../../public/bg2.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.LandingPage >>> #todayoffers h1, #menu h1 {
+    margin-bottom: 30px;
+}
+
+.LandingPage >>> .UnderH1 {
+    color: #19191971;
+    font-size: 16px;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.LandingPage >>> .FoodCards {
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.LandingPage >>> .FoodCard {
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(179.69deg, rgba(255, 255, 255, 0) -31.53%, #FFD7A6 -31.53%, rgba(255, 215, 166, 0.395833) 303.71%, #FF991F 303.75%);
+    width: 300px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: calc(198px / 2);
+    padding-bottom: 0;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: calc((198px / 2) + 50px);
+}
+
+.LandingPage >>> .FoodCard .FoodProfile {
+    position: absolute;
+    top: calc(-198px / 2);
+}
+
+.LandingPage >>> .FoodCard .FoodProfile img {
+    height: 198px;
+    width: 198px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0) 40%);
+}
+
+.LandingPage >>> .FoodProfile::before {
+    content: '';
+    content: '';
+    position: absolute;
+    height: calc(100% + 30px);
+    width: calc(100% + 30px);
+    background: red;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(180deg, var(--orange) 40%, #fff 40%);
+}
+
+.LandingPage >>> .FoodCard .FoodProfile .price {
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    font-size: 20px;
+    display: block;
+    background: var(--orange);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    color: white;
+    border: 3px solid white;
+    padding: 25px;
+    bottom: 0;
+    right: 0;
+}
+
+.LandingPage >>> .Reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.LandingPage >>> .Reviews .Reviewers {
+    display: flex;
+    width: calc(38px * 2);
+}
+
+.Reviews > * {
+    margin-right: 10px;
+}
+
+.LandingPage >>> .Reviews .Reviewers img {
+    height: 38px;
+    width: 38px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.Reviews .Reviewers img:nth-child(2) {
+    transform: translateX(-20px);
+}
+
+.Reviews .Reviewers img:nth-child(3) {
+    transform: translateX(-40px);
+}
+
+.LandingPage >>> .FoodCard h2 {
+    font-weight: 100;
+    color: #F54748;
+    font-style: italic;
+}
+
+.LandingPage >>> .FoodCard > p {
+    font-weight: 100;
+    font-style: italic;
+    color: #7a7a7a;
+    margin: 10px 0;
+}
+
+.LandingPage >>> .FoodCard > button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: var(--orange);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transform: translateY(20px);
+    height: 40px;
+}
+
+.LandingPage >>> .FoodRate {
+    color: #ffb800;
+    font-size: 20px;
+}
+
+.LandingPage >>> #why {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 448px;
+    width: 80%;
+    margin: auto;
+    /* min-width: 1000px; */
+    margin-top: 100px;
+    position: relative;
+}
+@media(max-width: 970px){
+    .LandingPage >>> #why{
+        width: initial;
+    }
+    #why > *{
+        text-align: center;
+    }
+}
+.LandingPage >>> #why::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 120%;
+    background: url('../../../public/bg1.png');
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.LandingPage >>> div#why::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -190px;
+    background: #FDC55E;
+    filter: blur(150px);
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    z-index: -1;
+}
+.LandingPage >>> #why .Left {
+    background-size: 95%;
+    height: 448px;
+    background-position: center;
+    min-width: 448px;
+    position: relative;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    /* background-color: white; */
+}
+
+.LandingPage >>> #why .Left::before {
+    content: '';
+    content: '';
+    position: absolute;
+    height: calc(100% + 50px);
+    width: calc(100% + 50px);
+    background: red;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(180deg, var(--orange) 40%, #fff 40%);
+}
+
+.LandingPage >>> #why .Left::after {
+    content: '';
+    position: absolute;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    background: red;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+.LandingPage >>> .Left img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 110%;
+    z-index: 2;
+}
+
+@media(max-width: 1000px){
+    .LandingPage >>> #why{
+        flex-direction: column;
+        margin-top: 300px;
+        margin-bottom: 100px;
+    }
+    .LandingPage >>> #why .Left{
+        min-height: 448px;
+    }
+}
+
+@media(max-width: 650px){
+    .LandingPage >>> #why .Left{
+        min-width: 248px;
+        min-height: 248px;
+    }
+}
+
+.LandingPage >>> #why .Right {
+    margin-left: 40px;
+    padding: 30px;
+}
+
+.LandingPage >>> #why .Right h1 {
+    margin-bottom: 30px;
+}
+
+.LandingPage >>> #why .Right p {
+    color: #606060;
+}
+
+
+.LandingPage >>> .Service {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 10px;
+    width: fit-content;
+    /* color: white; */
+    border-radius: 25px;
+}
+
+.LandingPage >>> .Services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 50px;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.LandingPage >>> .Service span {
+    font-weight: bold;
+}
+
+.LandingPage >>> .Service img{
+    height: 24px;
+    width: 24px;
+    object-fit: cover;
+}
+
+.LandingPage >>> #why button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: var(--orange);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.LandingPage >>> #menu{
+    margin-top: 200px;
+}
+
+.LandingPage >>> #menu h1{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.LandingPage >>> .Categories{
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    margin: auto;
+    align-items: center;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.LandingPage >>> .Categories button {
+    padding: 5px 20px;
+    border-radius: 40px;
+    background: transparent;
+    color: var(--orange);
+    font-size: 18px;
+    /* height: 40px; */
+    margin-top: 30px;
+    border: 2px solid var(--orange) !important;
+}
+
+.LandingPage >>> .Categories button.active{
+    background: var(--orange);
+    color: white;
+}
+
+.LandingPage >>> .Categories button:not(button.active):hover{
+    background: var(--orange) !important;
+    color: white !important;
+}
+
+
+.LandingPage >>> #download  {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 80%;
+    margin: auto;
+    /* min-width: 1000px; */
+    margin-top: 100px;
+    position: relative;
+    /* background: #FEF4E8; */
+}
+
+.LandingPage >>> #download::before {
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 120%;
+    width: 100vw;
+    position: absolute;
+    z-index: -2;
+    background: #FEF4E8;
+}
+
+
+.LandingPage >>> #download  .Left {
+    background-size: 95%;
+    height: 448px;
+    background-position: center;
+    min-width: 448px;
+    position: relative;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-color: #FEF4E8;
+}
+@media(max-width: 950px){
+    .LandingPage >>> #download{
+        flex-direction: column;
+    }
+    .LandingPage >>> #download  .Left{
+        min-height: 448px;
+    }
+}
+
+@media(max-width: 650px){
+    .LandingPage >>> #download .Left{
+        min-width: 248px;
+        width: 248px;
+        min-height: 248px;
+        height: 248px;
+    }
+}
+.LandingPage >>> #download .Left::before {
+    content: '';
+    content: '';
+    position: absolute;
+    height: calc(100% + 50px);
+    width: calc(100% + 50px);
+    background: red;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(180deg, var(--orange) 40%, #fff0 40%);
+}
+
+
+
+.LandingPage >>> #download .Left img {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 110%;
+    z-index: 2;
+}
+
+.LandingPage >>> #download  .Right {
+    margin-left: 40px;
+    padding: 30px;
+}
+
+.LandingPage >>> #download  .Right h1 {
+    margin-bottom: 30px;
+}
+
+.LandingPage >>> #download  .Right p {
+    color: #606060;
+}
+
+.LandingPage >>> .DownloadButtons{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.LandingPage >>> #footer {
+    margin-top: 100px;
+    background: white;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.LandingPage >>> #footer > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.LandingPage >>> .fmain > img {
+    height: 60px;
+    width: fit-content;
+    
+}
+
+.LandingPage >>> .fmain {
+    gap: 10px;
+}
+
+.LandingPage >>> .fmain i {
+    color: var(--orange);
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.LandingPage >>> .fmain i:hover{
+    transform: rotate(20deg);
+}
+
+.LandingPage >>> .fGroup > h3 {
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.LandingPage >>> .fGroup > a {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.LandingPage >>> .fGroup input, .fGroup button {
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+}
+
+.LandingPage >>> .fGroup input {
+    border-bottom: 2px solid gray;
+    background: #f0f0f0;
+    margin-right: 10px;
+}
+
+.LandingPage >>> .fGroup button {
+    background: var(--orange);
+    color: white;
+    font-weight: bold;
+}
+
+
+.LandingPage >>> .notSelected{
+    filter: grayscale(0.9);
+    pointer-events: none;
+}

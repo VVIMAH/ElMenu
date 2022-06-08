@@ -1,0 +1,89 @@
+.RestaurantMenu >>> .bodyyy{
+    width: 1000px;
+    height: 1000px;
+    margin: auto;
+    padding: 7em;
+    display: flex;
+}
+.RestaurantMenu >>> .last{
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.RestaurantMenu >>> .buttons{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.RestaurantMenu >>> .buttons div{
+    background-color: transparent;
+    color: orange;
+    font-size: 13px;
+    font-weight: bold;
+    border: 2px orange solid;
+    padding: 4px 24px;
+    border-radius: 17px;
+    width: fit-content;
+    
+    display: grid;
+    place-content: center;
+}
+
+.RestaurantMenu >>> .buttons div:hover{
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+    
+}
+.RestaurantMenu >>> .bodyy{
+    width: 1200px;
+    height: 1000px;
+    margin: auto;
+    padding: 5em 0px;
+    display: flex;
+}
+.RestaurantMenu >>> .form3{
+    display: flex;
+    flex-direction: column;
+}
+.RestaurantMenu >>> .form3 input{
+    width: 29em;
+    padding-left: 2em;
+    height: 37px;
+    border-radius: 0;
+    background-color: #f6f6f6;
+    border: 0;
+    border-bottom: 2px #e0e0e0 solid;
+    border-left: 0;
+}
+.RestaurantMenu >>> .form3 label{
+    padding-bottom: 0.5em;
+}
+
+.RestaurantMenu >>> .puh{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 400px;
+    
+}
+
+.RestaurantMenu >>> .file input{
+    background-color: white;
+    border: 1px #E2E2E2 solid;
+    color: black;
+    padding: 0;
+    text-align: center;
+}
+.RestaurantMenu >>> .butimage{
+    background-color:#f6f6f6;
+    border-bottom: 2px #E2E2E2 solid;
+    color: black;
+    font-weight: medium;
+    width: 28em;
+}

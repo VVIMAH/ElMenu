@@ -1,0 +1,105 @@
+.navbar{
+    width: 100%;
+    height: 80px;
+    height: 4em;
+    border-bottom: 3px rgba(0, 0, 0, 0.126) solid;
+    padding: 0 3em ;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.navbar >>> nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+  
+}
+
+
+.navbar >>> .logo{
+    width: 50%;
+    
+
+}
+.navbar >>> .icons{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.navbar >>> .twons{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+
+}
+.navbar >>> .twons img {
+    height: 23px;
+}
+.navbar >>> .user{
+    width: 22%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.navbar >>> .line{
+
+    display: flex;
+    align-items: center;
+
+
+}
+.navbar >>> .line img{
+    height: 34px;
+}
+
+
+@media only screen and (max-width: 700px){
+    .navbar{
+        width: 100%;
+        
+        height: 4em;
+        border-bottom: 3px rgba(0, 0, 0, 0.126) solid;
+        padding: 0 1em;
+        position: relative;
+        top: 0;
+        left: 0;
+        
+    }
+    .navbar >>> .twons img , .user img{
+        height: 30px;
+        width: 30px;
+        
+        
+    
+    }
+    .navbar >>> .twons{
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        width: auto;
+        
+    }
+    .navbar >>> .user , .line{
+        display: none;
+    }
+    .navbar >>> .logo{
+
+        margin: 0;
+    }
+    .navbar >>> .user{
+        text-align: end;
+    }
+    
+
+}
