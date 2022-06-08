@@ -1,0 +1,55 @@
+.content{
+    margin-left: 3em;
+    margin-top: 5em;
+    width: 96%;
+    height: 790px;
+    background-color: white;
+    border-radius: 0.8em;
+}
+.foodContent{
+    width: 50%;
+    height: 80%;
+    overflow-y: scroll;   
+}
+.foodDetails{
+  width: 80%;
+  height: 80px;
+  border-radius: 0.9em;
+  background-color: #E5E5E5;
+  margin: 2em;
+ align-items: center;
+ text-align: center;
+}
+.categories{
+    width: 100px;
+    height: 8px;
+    background-color: white;
+    margin-top: 1.2em;
+    margin-left: 5em;
+    border-radius: 0.9em;
+    padding: 1.5em;
+    float: right;
+    margin-right: 2em;
+    text-align: center;
+    border: 2px solid #F7941D;;
+
+}
+.categories:last-child{
+    background-color: #F7941D;
+}
+.foodPrice{
+    color: #F7941D;
+}
+.sample{
+    padding-left: 2.2em;
+    padding-top: 1.4em;
+}
+.fooddesc{
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+.foodName{
+    padding-top: 1em;
+}
+
+

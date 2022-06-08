@@ -1,0 +1,11 @@
+.feed{
+    clear: left;
+    flex:5;
+    position: absolute;
+    top: 0em;
+    left: 12em;
+    width: 88%;
+    height:100vh;
+    /* background-color: #E5E5E5; */
+
+}

@@ -1,0 +1,72 @@
+@media only screen and (max-width: 700px){
+.navbar{
+    width: 100%;
+    
+    height: 4em;
+    border-bottom: 3px rgba(0, 0, 0, 0.126) solid;
+    padding: 0 1em;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+.twons img , .user img{
+    height: 30px;
+    width: 30px;
+    
+    
+   
+}
+.twons{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: auto;
+    
+}
+.user , .line{
+    display: none;
+}
+.logo{
+
+    margin: 0;
+}
+.user{
+    text-align: end;
+}
+.BODY{
+    display: block;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+.left{
+width: max-content;
+
+}
+.middle{
+    width: 22em;
+    height: 1px;
+    background-color: #c4c4C4;
+    border-radius: 10px;
+    margin: auto 1em;
+    margin-bottom: 32px;
+}
+.RestaurantInfo{
+    width: 90%;
+    height: fit-content;
+    padding: 1em;
+}
+.RestaurantSignup{
+    overflow-y: scroll;
+    
+}
+.RestaurantType{
+    width: 90%;
+}
+.RestaurantMenu{
+    padding: 1em;
+}
+
+}

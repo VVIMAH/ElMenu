@@ -9,6 +9,7 @@ import { BsArrowCounterclockwise } from 'react-icons/bs';
 import { ImStatsBars } from 'react-icons/im';
 import { BiLogIn, BiSearchAlt } from 'react-icons/bi';
 import { TiTickOutline } from 'react-icons/ti';
+import './order.scoped.css'
 // import { list } from 'postcss';
 // import { data } from 'autoprefixer';
 

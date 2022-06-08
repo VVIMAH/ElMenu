@@ -1,0 +1,10 @@
+/* .circles{
+    background-color: olive;
+} */
+#firstchild{
+    background-color: orange;
+}
+
+@media only screen and (max-width: 700px){
+
+}
