@@ -15,7 +15,7 @@ function App() {
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/order" element={<Order />}></Route>
           <Route path="/restaurantprofile" element={<RestaurantProfile />}></Route>
-          <Route path="/menu" component={<Menu />}> </Route>
+          <Route path="/menu" element={<Menu />}> </Route>
           <Route path="*" element={<>Unknown Page</>}></Route>
         </Routes>
       </BrowserRouter>

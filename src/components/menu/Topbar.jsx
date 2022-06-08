@@ -1,5 +1,5 @@
 import React from 'react';
-import './tobar.css';
+import './topbar.scoped.css';
 import { Search,Notifications } from '@mui/icons-material';
 
 export default function Topbar() {
