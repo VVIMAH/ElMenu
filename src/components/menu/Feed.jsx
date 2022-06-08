@@ -1,5 +1,5 @@
 import React from 'react';
-import './feed.css';
+import './feed.scoped.css';
 
 
 

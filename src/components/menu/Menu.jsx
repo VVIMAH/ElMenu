@@ -3,10 +3,9 @@ import Center  from "./Center";
 import Topbar from './Topbar';
 import Sidebar from './Sidebar';
 
-export default function 
-() {
+export default function Menu() {
   return (
-    <div>
+    <div className="MenuPage">
         <Topbar/>
        <Sidebar/>
        <Center/>

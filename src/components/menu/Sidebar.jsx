@@ -1,23 +1,14 @@
 import { Settings,List,MenuBook,LightbulbCircle , PersonOutline, Circle} from '@mui/icons-material';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import './sidebar.css';
+import './sidebar.scoped.css';
 
 export default function Sidebar() { 
-  function overview(){
-    return <BrowserRouter>
-       <Routes>
-         <Route path="/overview" element={<Overview/>}>
 
-         </Route>
-       </Routes>
-    </BrowserRouter>
-  }
   return (
     
     <div className="sidebar">
         <div className="sidebarWrapper">
-            <img src="logo.png" className="logo" alt="logo"/>
+            <img src="logo_blackbg.png" className="logo" alt="logo"/>
         <ul className="sidebarList">
           <li className="sidebarListItem">
             <List htmlColor="gray" className="sidebarIcon" />
