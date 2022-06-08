@@ -1,10 +1,11 @@
-// import './components/ Restinfo/restinfo.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import{BrowserRouter,Routes,Route} from 'react-router-dom'
+import Order from './components/order/order'
 import Signup from './components/signup/signup'
 import RestaurantProfile from './components/RestaurantProfile/same/them'
 // import './App.css'
 import LandingPage from './components/landing/LandingPage'
 import Feed from './components/feed/Feed'
+import './App.css';
 
 function App() {
   return (
