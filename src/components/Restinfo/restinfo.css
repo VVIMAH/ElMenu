@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
 *{
-    padding: 0;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
+   
+  margin: 0;
 }
 .navbar{
     width: 100%;
@@ -84,6 +83,10 @@ align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 20px;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    --orange: #F7941D;
 }
 .left h3{
     font-weight:bold;
@@ -139,7 +142,7 @@ align-items: center;
 }
 
 .RestaurantInfo form input{
-    /* width: 29em; */
+  
     padding-left: 2em;
     height: 37px;
     border-radius: 0;
