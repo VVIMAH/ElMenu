@@ -108,7 +108,7 @@ const LandingPage = (props) => {
             }
           }
         }
-        console.log("%c [END]", "font-size: 25px; color: RED")
+        // console.log("%c [END]", "font-size: 25px; color: RED")
       })
     }
   }, [])
