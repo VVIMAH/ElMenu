@@ -1,5 +1,5 @@
-import React from 'react';
-import './signup.css';
+import {Link} from 'react-router-dom';
+import './signup.scoped.css';
 function Signup(){
     return(
         <div className="App">
@@ -42,7 +42,7 @@ function Signup(){
     
         <div className='a'>
           Already have an account?  
-          <a href="https://fonts.google.com/specimen/Raleway?query=raleway">Login</a>
+          <Link to="/login">Login</Link>
           </div>
         </form>
        

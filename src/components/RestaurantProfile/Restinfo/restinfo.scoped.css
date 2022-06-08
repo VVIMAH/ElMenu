@@ -1,0 +1,81 @@
+
+.RestaurantInfo >>> .first{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.RestaurantInfo >>> .circle{
+    padding-right: 1em;
+}
+
+
+
+
+.RestaurantInfo >>> {
+    width: 50%;
+    
+    
+}
+.RestaurantInfo >>>  form label{
+    color: #000000;
+    font-size: 15px;
+    padding-bottom:6px ;
+}
+
+.RestaurantInfo >>>  form input{
+    /* width: 29em; */
+    padding-left: 2em;
+    height: 37px;
+    border-radius: 0;
+    background-color: #f6f6f6;
+    border: 0;
+    border-bottom: 2px #e0e0e0 solid;
+    border-left: 0;
+}
+
+.RestaurantInfo form input[type=tel]{
+    border-bottom: 0;
+}
+
+.RestaurantInfo >>>  form .CountryCode{
+    padding: 0 10px 0 10px; 
+    border-right: 2px solid #c4c4c4;
+}
+
+.RestaurantInfo >>> .form{
+    display: flex;
+    height: fit-content;
+}
+.RestaurantInfo >>> .labels{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+.RestaurantInfo >>> .puh{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 400px;
+    
+}
+
+.RestaurantInfo >>> .inputs{
+    display: flex;
+    background-color: #f6f6f6;
+    align-items: center;
+   border-bottom: 2px #e0e0e0 solid;
+   
+}
+.RestaurantInfo >>> .inputs .inputt {
+    padding: 0;
+    border: 0;
+    margin-left: 1em;
+    height: 20px;
+    width: 35px;
+    border-left: 2px #ABABAB solid;
+
+}
+
+
+
