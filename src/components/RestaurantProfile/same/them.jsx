@@ -1,38 +1,42 @@
-import "../same/them.scoped.css";
-import React, { useState } from "react";
-import NavBarVans from "../navbar_vanessa/NavBar";
-import Resmenu from "../Resmenu/resmenu";
-import Restinfo from "../Restinfo/restinfo";
-import Restype from "../Restype/restype";
-// import Restinfo from '../Restinfo/restinfo';
-function Them() {
-  let curForm_notState;
-  const nextForm = (prevForm = null)=>{
-    
-    let newFormIndex = theForms.findIndex((el)=> el === ((curForm_notState) ? curForm_notState: curForm) )
+import './them.scoped.css'
+import React, { useState } from 'react'
+import NavBarVans from '../navbar_vanessa/NavBar'
+import Resmenu from '../Resmenu/resmenu'
+import Restinfo from '../Restinfo/restinfo'
+import Restype from '../Restype/restype'
+
+function RestaurantProfile() {
+  let curForm_notState
+  const nextForm = (prevForm = null) => {
+    let newFormIndex = theForms.findIndex(
+      (el) => el === (curForm_notState ? curForm_notState : curForm),
+    )
     console.log(newFormIndex)
-    let newForm;
-    if(newFormIndex >= theForms.length-1) return
-    newForm = theForms[newFormIndex+1]
+    let newForm
+    if (newFormIndex >= theForms.length - 1) return
+    newForm = theForms[newFormIndex + 1]
     setCurForm(newForm)
     curForm_notState = newForm
-    if(newFormIndex===0){
-     
-     document.getElementsByClassName("circles")[1].style.backgroundColor="orange";
-     document.getElementsByClassName("circles")[0].style.backgroundColor="#C4C4C4"
+    if (newFormIndex === 0) {
+      document.getElementsByClassName('circles')[1].style.backgroundColor =
+        'orange'
+      document.getElementsByClassName('circles')[0].style.backgroundColor =
+        '#C4C4C4'
+    } else if (newFormIndex === 1) {
+      document.getElementsByClassName('circles')[0].style.backgroundColor =
+        '#C4C4C4'
+      document.getElementsByClassName('circles')[1].style.backgroundColor =
+        '#C4C4C4'
+      document.getElementsByClassName('circles')[2].style.backgroundColor =
+        'orange'
     }
-    else if(newFormIndex===1){
-      document.getElementsByClassName("circles")[0].style.backgroundColor="#C4C4C4"
-      document.getElementsByClassName("circles")[1].style.backgroundColor="#C4C4C4"
-document.getElementsByClassName("circles")[2].style.backgroundColor="orange"
-
-    }
-
-     
-    
   }
-  
-  let theForms = [<Restinfo changeForm={nextForm}/>, <Restype changeForm={nextForm}/>,<Resmenu />]
+
+  let theForms = [
+    <Restinfo changeForm={nextForm} />,
+    <Restype changeForm={nextForm} />,
+    <Resmenu />,
+  ]
   const [curForm, setCurForm] = useState(theForms[0])
   return (
     <div className="RestaurantSignup">
@@ -44,9 +48,9 @@ document.getElementsByClassName("circles")[2].style.backgroundColor="orange"
           </h3>
           <div className="all">
             <div className="listin">
-              
-                <div className="circles" id="firstchild" >1</div>{" "}
-              
+              <div className="circles" id="firstchild">
+                1
+              </div>{' '}
             </div>
             <div className="first">
               <div className="top">Restaurant Information</div>
@@ -58,9 +62,7 @@ document.getElementsByClassName("circles")[2].style.backgroundColor="orange"
           </div>
           <div className="all">
             <div className="listin">
-              
-                <div className="circles">2</div>{" "}
-              
+              <div className="circles">2</div>{' '}
             </div>
             <div className="first">
               <div className="top">Restaurant Type and Timings</div>
@@ -72,9 +74,7 @@ document.getElementsByClassName("circles")[2].style.backgroundColor="orange"
           </div>
           <div className="all">
             <div className="listin">
-              
-                <div className="circles">3</div>{" "}
-            
+              <div className="circles">3</div>{' '}
             </div>
             <div className="first">
               <div className="top">Create your menu</div>
@@ -89,6 +89,6 @@ document.getElementsByClassName("circles")[2].style.backgroundColor="orange"
         {/* <Restinfo /> */}
       </div>
     </div>
-  );
+  )
 }
-export default Them;
+export default RestaurantProfile
