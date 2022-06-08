@@ -15,6 +15,7 @@ function App() {
           <Route path="/" element={<LandingPage />}></Route>
           <Route path='/feed' element={<Feed />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/order" element={<Order />}></Route>
           <Route path="/restaurantprofile" element={<RestaurantProfile />}></Route>
           <Route path="*" element={<>Unknown Page</>}></Route>
         </Routes>
