@@ -1,0 +1,34 @@
+.topbar{
+    display: flex;
+    clear: left;
+}
+.person{
+    width: 180px;
+    height: 17px;
+    margin-top:2em ;
+    margin-left: 70%;
+    padding: 1em;
+    border-left: 1px solid gray;
+    justify-content: center;
+}
+.profile{
+  float: right; 
+  padding: 1.2em; 
+}
+.icon{
+    padding: 0.5em;
+}
+.personName{
+    margin-top:20px;
+    position: absolute;
+    top: 2.5em
+}
+.upper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contentname{
+    font-size: 20px;
+    padding: 2em;
+}
