@@ -1,6 +1,7 @@
 import{BrowserRouter,Routes,Route} from 'react-router-dom'
 import Order from './components/order/order'
 import Signup from './components/signup/signup'
+import Login from './components/login/Login'
 import RestaurantProfile from './components/RestaurantProfile/same/them'
 import LandingPage from './components/landing/LandingPage'
 import Menu from './components/menu/Menu'
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/login" element={<Login />}></Route>
           <Route path="/order" element={<Order />}></Route>
           <Route path="/restaurantprofile" element={<RestaurantProfile />}></Route>
           <Route path="/menu" element={<Menu />}> </Route>

@@ -1,0 +1,112 @@
+.Login >>> .column  {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 100vh;
+  }
+  
+  /* Clear floats after the columns */
+.Login >>>   .row:after  {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+.Login >>>   .orange  {
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.Login >>>   .white  {
+    background-color: white;
+    /* text-align: center; */
+    color: gray;
+    padding-top: 8%;
+  }
+  
+.Login >>>   div h2  {
+    text-align: center;
+  }
+  
+.Login >>>   label  {
+    margin-left: 4.75em;
+  }
+  
+.Login >>>   .block  {
+    display: block;
+  }
+  
+.Login >>>   input  {
+    width: 80%;
+    height: 2.7em;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    outline: none;
+    border: 1.5px solid rgb(183, 183, 183);
+    background-color: rgb(242, 242, 242);
+    padding-left: 20px;
+    font-size: 1.2em;
+  
+  }
+  
+.Login >>>   .inputs  {
+    margin-bottom: 1.3em;
+  }
+  
+.Login >>>   .submit input  {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    border: none;
+    /* height: 2.7em; */
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1.2em;
+  }
+  
+.Login >>>   .signup  {
+    display: flex;
+    justify-content: center;
+  }
+  
+.Login >>>   #ask  {
+    margin-right: 1.2em;
+  }
+  
+.Login >>>   #signup  {
+    color: orange;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+.Login >>>   .logoo  {
+    text-align: center;
+  }
+  
+.Login >>>   #logoo  {
+    width: 211px;
+    height: 57px;
+  }
+  
+  @media only screen and (max-width: 912px) {
+.Login >>>     .orange {
+      display: none;
+    }
+.Login >>>     .white  {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 912px) {
+.Login >>>     .logoo  {
+      display: none;
+    }
+  }
+  
+  
+  
+  
+  
