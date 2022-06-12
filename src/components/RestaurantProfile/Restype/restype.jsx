@@ -1,11 +1,39 @@
 import React from "react";
 import "./restype.scoped.css";
 function Restype(props) {
+  const { changeForm, formData, setFormData } = props;
+
+  const sendData = async (e) => {
+    e.preventDefault();
+    const res = await fetch("http://iv-apis.herokuapp.com/nocors", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        url: "https://backend.supamenu.rw/supapp/api/service-providers",
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: formData,
+      }),
+    });
+    const data = await res.json();
+    console.log(data);
+  };
+
   return (
     <div className="RestaurantType">
-      <form className="open">
+      <form className="open" onSubmit={sendData}>
         <label>Restaurant type (Restaurant, Pub, Hotel, Other)</label>
-        <select name="type" id="">
+        <select
+          name="type"
+          id=""
+          onChange={(e) =>
+            setFormData({ ...formData, category: e.target.value })
+          }
+        >
           <option value="">Choose type</option>
           <option value="Restaurant">Restaurant</option>
           <option value="Pub">Pub</option>
@@ -24,7 +52,13 @@ function Restype(props) {
         <div className="hours">
           <div className="solid">
             From :
-            <select name="type" id="">
+            <select
+              name="type"
+              id=""
+              onChange={(e) =>
+                setFormData({ ...formData, openingHour: e.target.value })
+              }
+            >
               <option value="7:00AM">7:00AM</option>
               <option value="8:00AM">8:00AM</option>
               <option value="9:00AM">9:00AM</option>
@@ -37,7 +71,13 @@ function Restype(props) {
           </div>
           <div className="solid">
             To:
-            <select name="type" id="">
+            <select
+              name="type"
+              id=""
+              onChange={(e) =>
+                setFormData({ ...formData, closingHour: e.target.value })
+              }
+            >
               <option value="7:00PM">7:00PM</option>
               <option value="8:00PM">8:00PM</option>
               <option value="9:00PM">9:00PM</option>
@@ -66,10 +106,22 @@ function Restype(props) {
           Click to choose images
         </button>
         <br />
-        <button onClick={(e)=>{
-          e.preventDefault()
-          props.changeForm()
-        }}>Next</button>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            changeForm();
+          }}
+        >
+          Next
+        </button>
+        <br />
+        <button
+          onClick={(e) => {
+            sendData(e);
+          }}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

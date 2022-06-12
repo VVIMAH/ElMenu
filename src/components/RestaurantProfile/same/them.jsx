@@ -1,28 +1,35 @@
 import './them.scoped.css'
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import NavBarVans from '../navbar_vanessa/NavBar'
 import Resmenu from '../Resmenu/resmenu'
 import Restinfo from '../Restinfo/restinfo'
 import Restype from '../Restype/restype'
 
 function RestaurantProfile() {
-  let curForm_notState
-  const nextForm = (prevForm = null) => {
-    let newFormIndex = theForms.findIndex(
-      (el) => el === (curForm_notState ? curForm_notState : curForm),
-    )
-    console.log(newFormIndex)
-    let newForm
-    if (newFormIndex >= theForms.length - 1) return
-    newForm = theForms[newFormIndex + 1]
-    setCurForm(newForm)
-    curForm_notState = newForm
-    if (newFormIndex === 0) {
+  const [formData, setFormData]= useState({
+    address: '', category: '', closingHour:'', completeName:'', email:'', openingHour:'',
+    ownerEmail:'', ownerNames: '', ownerPhoneNumber:'', phone:''
+  })
+  const [curForm, setCurForm] = useState(1)
+
+ 
+  const nextForm = () => {
+    // let newFormIndex = theForms.findIndex(
+    //   (el) => el === (curForm_notState ? curForm_notState : curForm),
+    // )
+    // console.log(newFormIndex)
+    // let newForm
+    // if (newFormIndex >= theForms.length - 1) return
+    // newForm = theForms[newFormIndex + 1]
+    // setCurForm(newForm)
+    // curForm_notState = newForm
+    setCurForm(prev=> prev+1)
+    if (curForm === 1) {
       document.getElementsByClassName('circles')[1].style.backgroundColor =
         'orange'
       document.getElementsByClassName('circles')[0].style.backgroundColor =
         '#C4C4C4'
-    } else if (newFormIndex === 1) {
+    } else if (curForm === 2) {
       document.getElementsByClassName('circles')[0].style.backgroundColor =
         '#C4C4C4'
       document.getElementsByClassName('circles')[1].style.backgroundColor =
@@ -33,11 +40,11 @@ function RestaurantProfile() {
   }
 
   let theForms = [
-    <Restinfo changeForm={nextForm} />,
-    <Restype changeForm={nextForm} />,
+    <Restinfo changeForm={nextForm} formData={formData} setFormData={setFormData}   />,
+    <Restype changeForm={nextForm} formData={formData} setFormData={setFormData} />,
+    
     <Resmenu />,
   ]
-  const [curForm, setCurForm] = useState(theForms[0])
   return (
     <div className="RestaurantSignup">
       <NavBarVans />
@@ -84,7 +91,9 @@ function RestaurantProfile() {
           </div>
         </div>
         <div className="middle"></div>
-        {curForm}
+        {curForm===1 && <Restinfo changeForm={nextForm} formData={formData} setFormData={setFormData}   />}
+        {curForm===2 && <Restype changeForm={nextForm} formData={formData} setFormData={setFormData} />}
+        {curForm===3 && <Resmenu />}
         {/* <Restype /> */}
         {/* <Restinfo /> */}
       </div>

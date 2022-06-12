@@ -2,24 +2,28 @@ import React from "react";
 import "./restinfo.scoped.css";
 
 const  Restinfo = (props) =>{
-  console.log(props)
+  const { changeForm, formData, setFormData } = props
+  
   return (
     <div className="RestaurantInfo">
       <form action="#" method="POST">
         <div className="puh">
           <div className="labels">
             <label>Restaurant Information</label>
-            <input type="text" placeholder="Restaurant name" />
+            <input onChange={(e)=> setFormData({...formData, name: e.target.value})}
+             type="text" placeholder="Restaurant name" />
             <br />
 
-            <input type="text" placeholder="Restaurant full name" />
+            <input onChange={(e)=> setFormData({...formData, completeName: e.target.value})} 
+            type="text" placeholder="Restaurant full name" />
           </div>
           <div className="labels">
             <label>Contact number @ Restaurant</label>
             <div className="inputs">
               <span className="CountryCode">+250</span>
               {/* <input type="number" className="inputt" /> */}
-              <input type="tel" placeholder="mobile number" className="nber" />
+              <input onChange={(e)=> setFormData({...formData, phone: e.target.value})}
+               type="tel" placeholder="mobile number" className="nber" />
             </div>
           </div>
           <div className="labels">
@@ -28,19 +32,22 @@ const  Restinfo = (props) =>{
             <div className="inputs">
               <span className="CountryCode">+250</span>
               {/* <input type="text" className="inputt" /> */}
-              <input type="tel" placeholder="mobile number" className="nber" />
+              <input onChange={(e)=> setFormData({...formData, ownerPhoneNumber: e.target.value})}
+               type="tel" placeholder="mobile number" className="nber" />
             </div>
             <br />
-            <input type="text" placeholder="owner name" />
+            <input onChange={(e)=> setFormData({...formData, ownerNames: e.target.value})}
+            type="text" placeholder="owner name" />
             <br />
-            <input type="text" placeholder="owner email" />
+            <input onChange={(e)=> setFormData({...formData, ownerEmail: e.target.value})}
+             type="text" placeholder="owner email" />
             <br />
           </div>
 
           <button
             onClick={(e) => {
               e.preventDefault();
-              props.changeForm();
+              changeForm();
             }}
           >
             Next
