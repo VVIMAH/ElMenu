@@ -5,6 +5,7 @@ import Login from './components/login/Login'
 import RestaurantProfile from './components/RestaurantProfile/same/them'
 import LandingPage from './components/landing/LandingPage'
 import Menu from './components/menu/Menu'
+import ClientSignup from './components/clientSignup/signupclient'
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/order" element={<Order />}></Route>
           <Route path="/restaurantprofile" element={<RestaurantProfile />}></Route>
+          <Route path="/clientsignup" element={<ClientSignup />}></Route>
           <Route path="/menu" element={<Menu />}> </Route>
           <Route path="*" element={<>Unknown Page</>}></Route>
         </Routes>
