@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import logo from './logo.png'
 import { AiOutlineHome, AiOutlineMessage, AiFillSetting } from 'react-icons/ai';
@@ -10,8 +9,6 @@ import { ImStatsBars } from 'react-icons/im';
 import { BiLogIn, BiSearchAlt } from 'react-icons/bi';
 import { TiTickOutline } from 'react-icons/ti';
 import './order.scoped.css'
-// import { list } from 'postcss';
-// import { data } from 'autoprefixer';
 
 function Order() {
     // const [oname, setName] = useState('')
@@ -34,7 +31,6 @@ function Order() {
             headers: {
                 "API-Version": "1.0",
                 Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIxMjEiLCJzdWIiOiIxMjEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwidXNlciI6eyJpZCI6MTIxLCJuYW1lIjoic3RyaW5nIHN0cmluZyAwNzg4NjM2NDc4IiwidXNlcm5hbWUiOiI4OTk0MDciLCJtb2JpbGUiOm51bGwsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn1dLCJhY2NvdW50Tm9uTG9ja2VkIjp0cnVlLCJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJlbmFibGVkIjp0cnVlfSwiaWF0IjoxNjU0NTg1ODgyLCJleHAiOjE2NTQ2NzIyODJ9.YwvwQ85qapkMlyDl-rar2pXk5G-1TTSuX68fQHyrUiXRUtXoAKg7wkTT2q-eN_SagMDh3rd4MwULNXF0hW3cRw",
-
 
             }
 
