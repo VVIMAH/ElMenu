@@ -6,11 +6,9 @@ import Submit from "./Submit";
 function webImage() {
   return <img src={pic} />;
 }
-class App extends Component {
-  state = {};
-  render() {
+const App = ()=> {
     return (
-      <div className="container">
+      <div className="Login container">
         <div class="row">
           <div class="column orange">
             <img src={pic} alt="logo" className="logo" />
@@ -31,7 +29,6 @@ class App extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default App;
