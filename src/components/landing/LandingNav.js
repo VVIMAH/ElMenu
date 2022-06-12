@@ -13,6 +13,8 @@ const LandingNav = (props)=>{
                 <Link to="#todayoffers" onClick={scrollElementIntoView}>Today Special Offers</Link>
                 <Link to="#why" onClick={scrollElementIntoView}>Why ElMenu?</Link>
                 <Link to="#menu" onClick={scrollElementIntoView}>Our Menu</Link>
+                <Link to="/login" >Login</Link>
+                <Link to="/signup" >Signup</Link>
                 {/* <Link to="#popularfood" onClick={scrollElementIntoView}>Our Popular Food</Link> */}
                 <Link to="#download" onClick={scrollElementIntoView} className="DownloadAppButton">Download App</Link>
             </div>
