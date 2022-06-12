@@ -1,0 +1,136 @@
+/* .circles{
+    background-color: olive;
+} */
+
+
+.RestaurantSignup {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.RestaurantSignup >>> button{
+    width: 162px;
+    height: 43px;
+    background-color: orange;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+   
+}
+
+.RestaurantSignup >>> .top{
+    font-size: 17px;
+    padding-bottom: 5px;
+    font-weight: 700;
+    color: #5b5b5b;
+}
+
+.RestaurantSignup >>> .bottom{
+    font-size: 14px;
+    color:#ABABAB;
+
+}
+#firstchild{
+    background-color: orange;
+}
+.RestaurantSignup >>> .BODY{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+ }
+
+ .RestaurantSignup >>> .BODY .left{
+    background-color:white;
+     width: 45%;
+     height: 45%;
+     padding: 1em;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     gap: 20px;
+ }
+ .RestaurantSignup >>> .BODY .left h3{
+     font-weight:bold;
+     color: black;
+     /* padding-bottom: 2em; */
+     font-size: 18px;
+ }
+
+.RestaurantSignup >>> .BODY .left .listin a{
+    text-decoration: none;
+}
+.RestaurantSignup >>> .BODY .left .listin{
+    padding-right: 1em;
+
+}
+
+.RestaurantSignup >>> .BODY .left .listin .circles{
+    background-color: #C4C4C4;
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: large;
+    font-family: "smooch",cursive;
+    display: grid;
+    place-content: center;
+   
+    
+}
+
+.RestaurantSignup >>> .BODY .left .all{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.RestaurantSignup >>> .BODY .middle{
+    margin-right: 20px;
+    margin-top: 40px;
+    width: 10px;
+   
+    height: 200px;
+    border-left: 3px #E5E5E5 solid;
+}
+/*  */
+@media only screen and (max-width: 700px){
+    .RestaurantSignup >>> .BODY{
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+    .RestaurantSignup >>> .BODY .left{
+    width: max-content;
+
+    }
+    .RestaurantSignup >>> .BODY .middle{
+        width: 22em;
+        height: 1px;
+        background-color: #c4c4C4;
+        border-radius: 10px;
+        margin: auto 1em;
+        margin-bottom: 32px;
+    }
+    .RestaurantInfo{
+        width: 90%;
+        height: fit-content;
+        padding: 1em;
+    }
+    .RestaurantSignup{
+        overflow-y: scroll;
+        
+    }
+    .RestaurantType{
+        width: 90%;
+    }
+    .RestaurantMenu{
+        padding: 1em;
+    }
+}
